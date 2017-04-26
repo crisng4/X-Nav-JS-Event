@@ -1,0 +1,26 @@
+<html>
+	<title> Event Listener </title>
+	<style>
+		#display {
+			padding: 10px;
+		  display: inline-block;
+			border-style: groove;;
+		  width: 150px;
+		}
+	</style>
+	<body>
+	  <form id="form">
+		Introduce un color: <input id="color" type="text">
+	  </form>
+	  <p id="display"></p>
+	  <script>
+
+		    var display = document.getElementById('display');
+				var color = document.getElementById('color');
+		    var changeColor = function (){
+		        display.style.backgroundColor = this.value;
+		    }
+		    color.addEventListener('input', changeColor);
+	  </script>
+	</body>
+</html>
